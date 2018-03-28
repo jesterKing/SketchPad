@@ -23,6 +23,8 @@ namespace SketchPad
 		protected override Result RunCommand(RhinoDoc doc, RunMode mode)
 		{
 			SketchPadPlugIn.SPCond.Enabled = !SketchPadPlugIn.SPCond.Enabled;
+			DocumentCollectedExceptionCRMProvider dcecrm = new DocumentCollectedExceptionCRMProvider();
+
 			return Result.Success;
 		}
 	}

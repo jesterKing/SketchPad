@@ -2,7 +2,7 @@
 
 namespace SketchPad
 {
-	public class SPConduit : DisplayConduit
+	public class DocumentCollectedExceptionConduit : DisplayConduit
 	{
 
 		protected override void PreDrawObject(DrawObjectEventArgs e)
