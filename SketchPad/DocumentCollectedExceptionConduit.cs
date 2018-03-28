@@ -11,11 +11,11 @@ namespace SketchPad
 			{
 				if(e.RhinoObject.Geometry is Rhino.Geometry.Curve)
 				{
-					Rhino.RhinoApp.WriteLine("spconduit curve");
+					Rhino.RhinoApp.WriteLine("curve");
 				}
 			} catch(Rhino.Runtime.DocumentCollectedException)
 			{
-				Rhino.RhinoApp.WriteLine("exception");
+				Rhino.RhinoApp.WriteLine("DisplayConduit DocumentCollectedEcxeption");
 			}
 
 			base.PreDrawObject(e);

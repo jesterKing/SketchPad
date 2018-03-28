@@ -1,7 +1,17 @@
-﻿namespace SketchPad
+﻿using Rhino.PlugIns;
+
+namespace SketchPad
 {
 	public class SketchPadPlugIn : Rhino.PlugIns.PlugIn
 	{
+		public override PlugInLoadTime LoadTime => PlugInLoadTime.AtStartup;
+
+		protected override LoadReturnCode OnLoad(ref string errorMessage)
+		{
+			Rhino.Render.CustomRenderMeshProvider2.RegisterProviders(Assembly, Id);
+			return base.OnLoad(ref errorMessage);
+		}
+
 		public static DocumentCollectedExceptionConduit SPCond { get; private set; }
 		public SketchPadPlugIn()
 		{

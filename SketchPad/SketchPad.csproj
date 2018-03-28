@@ -11,7 +11,7 @@
     <RootNamespace>SketchPad</RootNamespace>
     <AssemblyName>SketchPad</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-		<TargetExt>.rhp</TargetExt>
+    <TargetExt>.rhp</TargetExt>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
   </PropertyGroup>
@@ -20,7 +20,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\</OutputPath>
-		<TargetExt>.rhp</TargetExt>
+    <TargetExt>.rhp</TargetExt>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
@@ -30,7 +30,7 @@
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
-		<TargetExt>.rhp</TargetExt>
+    <TargetExt>.rhp</TargetExt>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -56,10 +56,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SketchPadCommand.cs" />
+    <Compile Include="DocumentCollectedExceptionCRMProvider.cs" />
+    <Compile Include="TestDocumentCollectedException.cs" />
     <Compile Include="SketchPadPlugIn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SPConduit.cs" />
+    <Compile Include="DocumentCollectedExceptionConduit.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="EmbeddedResources\plugin-utility.ico" />
