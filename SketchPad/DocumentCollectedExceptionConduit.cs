@@ -5,20 +5,26 @@ namespace SketchPad
 	public class DocumentCollectedExceptionConduit : DisplayConduit
 	{
 
+		private bool done = false;
 		protected override void PreDrawObject(DrawObjectEventArgs e)
 		{
-			try
+			if (!done)
 			{
-				if(e.RhinoObject.Geometry is Rhino.Geometry.Curve)
+				try
 				{
-					Rhino.RhinoApp.WriteLine("curve");
+					if (e.RhinoObject.Geometry is Rhino.Geometry.Mesh)
+					{
+						if (!done) Rhino.RhinoApp.WriteLine("predrawob mesh");
+					}
 				}
-			} catch(Rhino.Runtime.DocumentCollectedException)
-			{
-				Rhino.RhinoApp.WriteLine("DisplayConduit DocumentCollectedEcxeption");
+				catch (Rhino.Runtime.DocumentCollectedException)
+				{
+					if (!done) Rhino.RhinoApp.WriteLine("DisplayConduit DocumentCollectedEcxeption");
+				}
+				if (!done) done = true;
 			}
 
-			base.PreDrawObject(e);
+			//base.PreDrawObject(e);
 		}
 	}
 }

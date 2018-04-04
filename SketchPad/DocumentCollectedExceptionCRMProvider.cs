@@ -8,6 +8,7 @@ namespace SketchPad
 {
 	public class DocumentCollectedExceptionCRMProvider : CustomRenderMeshProvider2
 	{
+		public static bool done = false;
 		public DocumentCollectedExceptionCRMProvider()
 		{
 			RhinoApp.WriteLine(Name);
@@ -22,19 +23,20 @@ namespace SketchPad
 		public override bool WillBuildCustomMeshes(ViewportInfo vp, RhinoObject obj, RhinoDoc doc, Guid requestingPlugIn, DisplayPipelineAttributes attrs)
 		{
 			bool rc = false;
-			if (obj != null)
+			if (!done && obj != null)
 			{
 				try
 				{
 					var validity = obj.Geometry.IsValid ? "valid" : "invalid";
-					RhinoApp.WriteLine(validity);
+					if(!done) RhinoApp.WriteLine(validity);
 					rc = true;
 				}
 				catch (Rhino.Runtime.DocumentCollectedException)
 				{
-					RhinoApp.WriteLine("CRM DocumentCollectedEcxeption");
+					if(!done) RhinoApp.WriteLine("CRM DocumentCollectedEcxeption");
 					rc = false;
 				}
+				if (!done) done = true;
 			}
 
 			return rc;
