@@ -56,8 +56,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\TestParallelDimStyle.cs" />
     <Compile Include="Commands\TestCauseFunkyException.cs" />
+    <Compile Include="Commands\TestCRMProvider.cs" />
+    <Compile Include="Commands\TestDocumentPropertiesChanged.cs" />
+    <Compile Include="Commands\TestMaterialTablesEvents.cs" />
+    <Compile Include="Commands\TestTransformEvents.cs" />
     <Compile Include="DocumentCollectedExceptionCRMProvider.cs" />
+    <Compile Include="SPRenderMaterial.cs" />
     <Compile Include="TestDocumentCollectedException.cs" />
     <Compile Include="SketchPadPlugIn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

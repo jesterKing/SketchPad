@@ -7,12 +7,12 @@ using Rhino.PlugIns;
 // These will show in Rhino's option dialog, in the tab Plug-ins.
 [assembly: PlugInDescription(DescriptionType.Address, "-")]
 [assembly: PlugInDescription(DescriptionType.Country, "-")]
-[assembly: PlugInDescription(DescriptionType.Email, "-")]
+[assembly: PlugInDescription(DescriptionType.Email, "nathan@mcneel.com")]
 [assembly: PlugInDescription(DescriptionType.Phone, "-")]
 [assembly: PlugInDescription(DescriptionType.Fax, "-")]
-[assembly: PlugInDescription(DescriptionType.Organization, "-")]
-[assembly: PlugInDescription(DescriptionType.UpdateUrl, "-")]
-[assembly: PlugInDescription(DescriptionType.WebSite, "-")]
+[assembly: PlugInDescription(DescriptionType.Organization, "McNeel & Associates")]
+[assembly: PlugInDescription(DescriptionType.UpdateUrl, "https://discourse.mcneel.com")]
+[assembly: PlugInDescription(DescriptionType.WebSite, "https://discourse.mcneel.com")]
 
 // Icons should be Windows .ico files and contain 32-bit images in the following sizes: 16, 24, 32, 48, and 256.
 // This is a Rhino 6-only description.
@@ -24,7 +24,7 @@ using Rhino.PlugIns;
 [assembly: AssemblyTitle("SketchPad")]
 
 // This will be used also for the plug-in description.
-[assembly: AssemblyDescription("SketchPad utility plug-in")]
+[assembly: AssemblyDescription("SketchPad - collection of quick tests")]
 
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
@@ -52,8 +52,8 @@ using Rhino.PlugIns;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("0.0.2.0")]
-[assembly: AssemblyFileVersion("0.0.2.0")]
+[assembly: AssemblyVersion("0.0.4.0")]
+[assembly: AssemblyFileVersion("0.0.4.0")]
 
 // Make compatible with Rhino Installer Engine
-[assembly: AssemblyInformationalVersion("0.0.2")]
+[assembly: AssemblyInformationalVersion("0.0.4")]

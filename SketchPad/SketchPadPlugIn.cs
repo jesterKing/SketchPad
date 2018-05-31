@@ -1,4 +1,5 @@
-﻿using Rhino.PlugIns;
+﻿using Rhino;
+using Rhino.PlugIns;
 
 namespace SketchPad
 {
@@ -8,7 +9,7 @@ namespace SketchPad
 
 		protected override LoadReturnCode OnLoad(ref string errorMessage)
 		{
-			Rhino.Render.CustomRenderMeshProvider2.RegisterProviders(Assembly, Id);
+			//Rhino.Render.CustomRenderMeshProvider2.RegisterProviders(Assembly, Id);
 			return base.OnLoad(ref errorMessage);
 		}
 
