@@ -15,8 +15,11 @@ namespace SketchPad
 		public override string TypeName => "SPRenderMaterial";
 
 		public override string TypeDescription => "SPRenderMaterial Tests";
+
+
 		public SPRenderMaterial()
 		{
+			Fields.Add("yesno", false, "yesno");
 			//System.Diagnostics.Debug.WriteLine("constructing an SPRenderMaterial\n");
 		}
 
@@ -24,6 +27,11 @@ namespace SketchPad
 		{
 			//System.Diagnostics.Debug.WriteLine($"Disposing SPRenderMaterial: {Id} {RenderHash}\n");
 			base.Dispose(disposing);
+		}
+
+		protected override uint CalculateRenderHash(ulong rcrcFlags)
+		{
+			return base.CalculateRenderHash(rcrcFlags);
 		}
 	}
 }

@@ -17,7 +17,7 @@ namespace SketchPad.Commands
 		protected override Result RunCommand(RhinoDoc doc, RunMode mode)
 		{
 			DimensionStyle ds = doc.DimStyles.BuiltInStyles[0];
-			Parallel.For(0, 1000000, x => DoDimStyle(x, ds));
+			Parallel.For(int.MinValue, int.MaxValue, x => DoDimStyle(x, ds));
 			return Result.Success;
 		}
 
@@ -25,7 +25,7 @@ namespace SketchPad.Commands
 		{
 			using (var x = ds.Duplicate())
 			{
-				if (i % 10000 == 0) RhinoApp.WriteLine($"{x.Name}");
+				if (i % 10000 == 0) RhinoApp.WriteLine($"{i}");
 			}
 		}
 	}
